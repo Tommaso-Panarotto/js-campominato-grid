@@ -12,28 +12,32 @@ const grid = document.getElementById('grid');
 const button = document.querySelector('button');
 const level = document.querySelector('select');
 
-//raccolta dati
-const typeOfLevel = level.value;
-
 //reagisco al click
 button.addEventListener('click', function () {
-    //numero celle
+    //raccolta dati
+    const typeOfLevel = level.value;
+
+    //numero righe e colonne
     let rows = 7;
     let cols = 7;
-    let totalCells = rows * cols;
 
-    if (typeOfLevel === 'easy') {
-        rows = 10;
-        cols = 10;
-    } else if (typeOfLevel === 'medium') {
-        rows = 9;
-        cols = 9;
+    switch (typeOfLevel) {
+        case 'easy':
+            rows = 10;
+            cols = 10;
+            break;
+        case 'medium':
+            rows = 9;
+            cols = 9;
+            break;
     }
+
+    //calcolo il numero di celle
     totalCells = rows * cols;
 
     //genero il numero corretto di celle
     for (let i = 0; i < totalCells; i++) {
-        const cell = createCell();
+        const cell = createCell(typeOfLevel);
 
         //aggiungo il numero della cella
         cell.append(i + 1);
