@@ -4,6 +4,10 @@ footer {
     background-color: #F8F9FA;
 }
 
+select {
+    background-color: #F0F0F0;
+}
+
 /*Main*/
 #grid {
     width: 800px;
@@ -27,4 +31,19 @@ footer {
 
 #grid .clicked {
     background-color: red;
+}
+
+.easy {
+    height: calc(100% / 10);
+    flex-basis: calc(100% / 10);
+}
+
+.medium {
+    height: calc(100% / 9);
+    flex-basis: calc(100% / 9);
+}
+
+.hard {
+    height: calc(100% / 7);
+    flex-basis: calc(100% / 7);
 }
