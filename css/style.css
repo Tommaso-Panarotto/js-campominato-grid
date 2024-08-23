@@ -1,12 +1,21 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/*Generics*/
+footer{
+    height: 80px;
+    background-color: #F8F9FA;
+}
+/*Main*/
+#grid{
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+}
+.cell {
+    border: 1px solid black;
+    height: calc(100% / 10);
+    flex-basis: calc(100% / 10);
+    cursor: pointer;
 }
 
-/* Utils */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+#grid .clicked{
+    background-color: red;
 }
