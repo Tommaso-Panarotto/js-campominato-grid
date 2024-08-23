@@ -22,8 +22,18 @@ button.addEventListener('click', function () {
     for (let i = 0; i < totalCells; i++) {
         const cell = createCell();
 
+        //aggiungo il numero della cella
+        cell.append(i + 1);
+
+        //reagisco al click sulla cella
+        cell.addEventListener('click', function () {
+            cell.classList.toggle('clicked');
+            console.log(cell.innerText);
+        }
+        )
+
         //la aggiungo in pagina
         grid.appendChild(cell);
     }
-
-})
+}
+)
